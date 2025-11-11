@@ -3,6 +3,9 @@ let randomChoosenColor
 let gamePattern = []
 let userClickedPattern = []
 let level = 0
+let highScore = 0
+let gameIsRunning = false
+
 
 
 
@@ -64,6 +67,8 @@ if(userClickedPattern[level] === gamePattern[level]) {
     let wrongSound = new Audio('sounds/wrong.mp3')
     wrongSound.play();
     $('body').addClass('game-over')
+    checkHighest(level)
+    $('#high-score').text('Highest Score: ' + highScore)
     setTimeout(function () {
         $('body').removeClass('game-over')
     }, 200);
@@ -74,3 +79,9 @@ function startOver() {
     level = 0
     gamePattern = []
 }
+function checkHighest(score){
+    if(highScore < score){
+        highScore = score
+    }
+}
+
