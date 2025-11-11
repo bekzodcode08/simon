@@ -2,7 +2,7 @@ body{
     text-align: center;
     background-color: #011f3f;
 }
-#level-title{
+#level-title , #high-score{
     font-family: 'Press Start 2P', cursive;
     color: #fef2bf;
     
@@ -41,4 +41,5 @@ body{
 .preessed{
     box-shadow: 0 0 20px white;
     background-color: grey;
+
 }
